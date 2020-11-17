@@ -36,7 +36,7 @@ class App extends Component {
 
     const charArray = this.state.inputStuff[0].paragraph.split("");
     const letters = charArray.map((elem, index) => {
-      return <Char letter={elem} clicked={()=> this.deleteCharHandler(index)} />
+      return <Char letter={elem} key={index} clicked={()=> this.deleteCharHandler(index)} />
     })
     
     return (
